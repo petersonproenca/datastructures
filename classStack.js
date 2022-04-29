@@ -1,45 +1,45 @@
 class Stack {
   
   constructor(c) {
-    globalThis.capacidade = c
-    globalThis.stack = new Array(self.capacidade) 
+    this.capacidade = c
+    this.stack = new Array(this.capacidade) 
     //inicalizando um vetor vazio
-    globalThis.inicio = 0  
-    globalThis.fim = 0    
-    return globalThis.stack;
+    this.inicio = 0  
+    this.fim = 0    
+    return this.stack;
   }
   
-   insert (x) {
-    if (globalThis.fim == globalThis.capacidade) {
+  insert (x) {
+    if (this.fim == this.capacidade) {
       return "Stack Overflow";
     }
     else {
-      globalThis.fim += 1
-      globalThis.stack.push(x)
-      return globalThis.stack;
+      this.fim += 1
+      this.stack.push(x)
+      return this.stack;
     }
   }
-
-   delete () {
-    if (globalThis.fim == 0) {
+  
+  delete () {
+    if (this.fim == 0) {
       return "Empty Stack";
     }
     else {
-      let a = globalThis.stack[globalThis.fim];
-      globalThis.fim -= 1
-      globalThis.stack.pop()
-      return globalThis.stack , a;
+      let a = this.stack[this.fim];
+      this.fim -= 1
+      this.stack.pop()
+      return a;
     }
   }
-
-
-   len(){
-   return globalThis.fim;
+  
+  
+  len(){
+   return this.fim;
   }
   
-   /*print(){
+  /*print(){
     let i;
-    for (i of globalThis.stack) {
+    for (i of this.stack) {
       document.write(i);
     }
   }*/
